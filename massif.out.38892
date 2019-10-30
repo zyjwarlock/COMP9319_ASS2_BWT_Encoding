@@ -1,0 +1,931 @@
+desc: --pages-as-heap=yes
+cmd: ./bwtencode \n tmpFile50 ../v10test/file_50_mb.txt file50.bwt
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=151552
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=44009
+mem_heap_B=2441216
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=180271
+mem_heap_B=2441216
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n3: 2441216 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n4: 2244608 0x401A4CF: mmap (mmap.c:42)
+  n1: 2048000 0x4005DA0: _dl_map_object_from_fd (dl-map-segments.h:56)
+   n2: 2048000 0x4008747: _dl_map_object (dl-load.c:2430)
+    n1: 2027520 0x400D6B0: openaux (dl-deps.c:63)
+     n1: 2027520 0x4018DD0: _dl_catch_error (dl-error-skeleton.c:198)
+      n1: 2027520 0x400D87C: _dl_map_object_deps (dl-deps.c:254)
+       n1: 2027520 0x4003B23: dl_main (rtld.c:1725)
+        n1: 2027520 0x4017EAF: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 2027520 0x40018A0: _dl_start (rtld.c:414)
+          n0: 2027520 0x4000B25: ??? (in /lib/i386-linux-gnu/ld-2.26.so)
+    n0: 20480 in 1 place, below massif's threshold (1.00%)
+  n2: 135168 0x40105CF: _dl_sysdep_read_whole_file (dl-misc.c:58)
+   n1: 135168 0x4015856: _dl_load_cache_lookup (dl-cache.c:203)
+    n1: 135168 0x4008A81: _dl_map_object (dl-load.c:2296)
+     n1: 135168 0x400D6B0: openaux (dl-deps.c:63)
+      n1: 135168 0x4018DD0: _dl_catch_error (dl-error-skeleton.c:198)
+       n1: 135168 0x400D87C: _dl_map_object_deps (dl-deps.c:254)
+        n1: 135168 0x4003B23: dl_main (rtld.c:1725)
+         n1: 135168 0x4017EAF: _dl_sysdep_start (dl-sysdep.c:253)
+          n1: 135168 0x40018A0: _dl_start (rtld.c:414)
+           n0: 135168 0x4000B25: ??? (in /lib/i386-linux-gnu/ld-2.26.so)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n1: 32768 0x4005E5C: _dl_map_object_from_fd (dl-map-segments.h:94)
+   n1: 32768 0x4008747: _dl_map_object (dl-load.c:2430)
+    n0: 32768 in 2 places, all below massif's threshold (1.00%)
+  n0: 28672 in 2 places, all below massif's threshold (1.00%)
+ n0: 196608 0xFFFFFFFF: ???
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=3
+#-----------
+time=267061
+mem_heap_B=54681600
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=570275589
+mem_heap_B=59813888
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=570366496
+mem_heap_B=101548032
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=570477462
+mem_heap_B=174698496
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=211997694380
+mem_heap_B=174833664
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=211997903811
+mem_heap_B=174833664
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n3: 174833664 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 171548672 0x4141993: mmap (mmap.c:42)
+  n1: 171548672 0x40C8566: sysmalloc (malloc.c:2327)
+   n1: 171548672 0x40C8E7F: _int_malloc (malloc.c:3553)
+    n2: 171548672 0x40CAE82: calloc (malloc.c:3430)
+     n1: 119308288 0x8049A2F: encode_large (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+      n0: 119308288 0x8048ABC: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n0: 52240384 0x8048A6E: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+ n2: 2109440 0x401A4CF: mmap (mmap.c:42)
+  n1: 2048000 0x4005DA0: _dl_map_object_from_fd (dl-map-segments.h:56)
+   n2: 2048000 0x4008747: _dl_map_object (dl-load.c:2430)
+    n1: 2027520 0x400D6B0: openaux (dl-deps.c:63)
+     n1: 2027520 0x4018DD0: _dl_catch_error (dl-error-skeleton.c:198)
+      n1: 2027520 0x400D87C: _dl_map_object_deps (dl-deps.c:254)
+       n1: 2027520 0x4003B23: dl_main (rtld.c:1725)
+        n1: 2027520 0x4017EAF: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 2027520 0x40018A0: _dl_start (rtld.c:414)
+          n0: 2027520 0x4000B25: ??? (in /lib/i386-linux-gnu/ld-2.26.so)
+    n0: 20480 in 1 place, below massif's threshold (1.00%)
+  n0: 61440 in 4 places, all below massif's threshold (1.00%)
+ n0: 1175552 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=9
+#-----------
+time=211997921391
+mem_heap_B=55762944
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=212420428105
+mem_heap_B=59502592
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=212420434870
+mem_heap_B=64471040
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=212420599183
+mem_heap_B=65413120
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=212420713919
+mem_heap_B=86507520
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=212420848818
+mem_heap_B=87420928
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=212421018604
+mem_heap_B=88752128
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=212421154912
+mem_heap_B=90316800
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=212421317199
+mem_heap_B=142094336
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=212421405727
+mem_heap_B=143745024
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=363142618944
+mem_heap_B=143740928
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=363142657705
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=363361486723
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=peak
+n2: 230260736 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 226983936 0x4141993: mmap (mmap.c:42)
+  n1: 226983936 0x40C8566: sysmalloc (malloc.c:2327)
+   n1: 226983936 0x40C8E7F: _int_malloc (malloc.c:3553)
+    n5: 226983936 0x40CAE82: calloc (malloc.c:3430)
+     n1: 120000512 0x8049580: merge (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+      n0: 120000512 0x8048ADF: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n0: 52240384 0x8048A6E: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n1: 52240384 0x80494B5: merge (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+      n0: 52240384 0x8048ADF: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n1: 2502656 0x8049646: merge (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+      n0: 2502656 0x8048ADF: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 3276800 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=22
+#-----------
+time=363361486994
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=363593936671
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=363593936942
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=364081042671
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=364081042942
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=364495341545
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=364495341816
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=364829252517
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=364829252850
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n2: 230260736 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 226983936 0x4141993: mmap (mmap.c:42)
+  n1: 226983936 0x40C8566: sysmalloc (malloc.c:2327)
+   n1: 226983936 0x40C8E7F: _int_malloc (malloc.c:3553)
+    n5: 226983936 0x40CAE82: calloc (malloc.c:3430)
+     n1: 120000512 0x8049580: merge (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+      n0: 120000512 0x8048ADF: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n0: 52240384 0x8048A6E: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n1: 52240384 0x80494B5: merge (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+      n0: 52240384 0x8048ADF: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n1: 2502656 0x8049646: merge (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+      n0: 2502656 0x8048ADF: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 3276800 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=31
+#-----------
+time=365364596296
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=365364596567
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=365741783983
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=365741784254
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=366013421380
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=366013421651
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=366319460887
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=366319461158
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=366595197782
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=366595198053
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n2: 230260736 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 226983936 0x4141993: mmap (mmap.c:42)
+  n1: 226983936 0x40C8566: sysmalloc (malloc.c:2327)
+   n1: 226983936 0x40C8E7F: _int_malloc (malloc.c:3553)
+    n5: 226983936 0x40CAE82: calloc (malloc.c:3430)
+     n1: 120000512 0x8049580: merge (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+      n0: 120000512 0x8048ADF: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n0: 52240384 0x8048A6E: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n1: 52240384 0x80494B5: merge (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+      n0: 52240384 0x8048ADF: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n1: 2502656 0x8049646: merge (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+      n0: 2502656 0x8048ADF: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 3276800 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=41
+#-----------
+time=366867940498
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=366867940769
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=367240737444
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=367240737715
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=367703267385
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=367703267656
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=368117279977
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=368117280248
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=368507209282
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=368507209553
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n2: 230260736 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 226983936 0x4141993: mmap (mmap.c:42)
+  n1: 226983936 0x40C8566: sysmalloc (malloc.c:2327)
+   n1: 226983936 0x40C8E7F: _int_malloc (malloc.c:3553)
+    n5: 226983936 0x40CAE82: calloc (malloc.c:3430)
+     n1: 120000512 0x8049580: merge (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+      n0: 120000512 0x8048ADF: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n0: 52240384 0x8048A6E: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n1: 52240384 0x80494B5: merge (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+      n0: 52240384 0x8048ADF: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n1: 2502656 0x8049646: merge (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+      n0: 2502656 0x8048ADF: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 3276800 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=51
+#-----------
+time=368900089749
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=368900090020
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=369329333687
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=369329333958
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=369785618424
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=369785618695
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=370314748396
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=370314748667
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=370734721291
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=370734721562
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n2: 230260736 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 226983936 0x4141993: mmap (mmap.c:42)
+  n1: 226983936 0x40C8566: sysmalloc (malloc.c:2327)
+   n1: 226983936 0x40C8E7F: _int_malloc (malloc.c:3553)
+    n5: 226983936 0x40CAE82: calloc (malloc.c:3430)
+     n1: 120000512 0x8049580: merge (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+      n0: 120000512 0x8048ADF: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n0: 52240384 0x8048A6E: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n1: 52240384 0x80494B5: merge (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+      n0: 52240384 0x8048ADF: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n1: 2502656 0x8049646: merge (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+      n0: 2502656 0x8048ADF: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 3276800 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=61
+#-----------
+time=371158597068
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=371158597339
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=371659220690
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=371659220961
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=372108404338
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=372108404609
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=372507142577
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=372507142848
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=372889324688
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=372889324959
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n2: 230260736 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 226983936 0x4141993: mmap (mmap.c:42)
+  n1: 226983936 0x40C8566: sysmalloc (malloc.c:2327)
+   n1: 226983936 0x40C8E7F: _int_malloc (malloc.c:3553)
+    n5: 226983936 0x40CAE82: calloc (malloc.c:3430)
+     n1: 120000512 0x8049580: merge (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+      n0: 120000512 0x8048ADF: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n0: 52240384 0x8048A6E: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n1: 52240384 0x80494B5: merge (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+      n0: 52240384 0x8048ADF: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n1: 2502656 0x8049646: merge (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+      n0: 2502656 0x8048ADF: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 3276800 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=71
+#-----------
+time=373300545602
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=373300545873
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=373724257062
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=373724257333
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=374189138144
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=374189138415
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=374641784178
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=374641784449
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=375128413860
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=375128414131
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n2: 230260736 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 226983936 0x4141993: mmap (mmap.c:42)
+  n1: 226983936 0x40C8566: sysmalloc (malloc.c:2327)
+   n1: 226983936 0x40C8E7F: _int_malloc (malloc.c:3553)
+    n5: 226983936 0x40CAE82: calloc (malloc.c:3430)
+     n1: 120000512 0x8049580: merge (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+      n0: 120000512 0x8048ADF: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n0: 52240384 0x8048A6E: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n1: 52240384 0x80494B5: merge (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+      n0: 52240384 0x8048ADF: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n1: 2502656 0x8049646: merge (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+      n0: 2502656 0x8048ADF: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 3276800 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=81
+#-----------
+time=375568135277
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=375568135548
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=375928236842
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=375928237113
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=85
+#-----------
+time=376331325764
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=86
+#-----------
+time=376331326035
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=87
+#-----------
+time=376912099466
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=88
+#-----------
+time=376912099737
+mem_heap_B=230260736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=89
+#-----------
+time=377320929651
+mem_heap_B=230256640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=90
+#-----------
+time=377320929926
+mem_heap_B=229208064
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n2: 229208064 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 225931264 0x4141993: mmap (mmap.c:42)
+  n1: 225931264 0x40C8566: sysmalloc (malloc.c:2327)
+   n1: 225931264 0x40C8E7F: _int_malloc (malloc.c:3553)
+    n4: 225931264 0x40CAE82: calloc (malloc.c:3430)
+     n1: 120000512 0x8049580: merge (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+      n0: 120000512 0x8048ADF: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n0: 52240384 0x8048A6E: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n1: 52240384 0x80494B5: merge (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+      n0: 52240384 0x8048ADF: main (in /tmp_amd/cage/export/cage/1/z5089986/cs9319/ultimal_exx/bwtencode)
+     n0: 1449984 in 3 places, all below massif's threshold (1.00%)
+ n0: 3276800 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=91
+#-----------
+time=377582773704
+mem_heap_B=229203968
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=92
+#-----------
+time=377582781415
+mem_heap_B=227753984
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=93
+#-----------
+time=377582781785
+mem_heap_B=55513088
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=94
+#-----------
+time=377582783257
+mem_heap_B=12390400
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=95
+#-----------
+time=377582785845
+mem_heap_B=21504000
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
