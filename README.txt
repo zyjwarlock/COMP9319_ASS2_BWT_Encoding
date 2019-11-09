@@ -1,5 +1,7 @@
 This document is for describing the algorithm and the structure of the code of my assignment solution.
 
+[Project Description](https://github.com/zyjwarlock/COMP9319_ASS2_BWT_Encoding/blob/master/COMP9319%202018s2%20Assignment%202.pdf)
+
 For BWT encoding, I first design a structure array called "Bucket", including 130 elements for each ascII from 0 to 129. Each structure contains an index array for storing indexes of certain character in the original file and a current size of index array. Secondly, I sort the index array of each "Bucket" respectively. Because of the same character in each "Bucket", I sort indexes by comparing the ascII of the charater of it, and the Quick Sort algorithm is appled in this sort function. Thirdly, I traverse the index array of "Bucket" which containing the delimiter at first and write the previous character of it into the BWT file. Finally, I iterate the rest of indexes array of Buckets whose the size of index array is larger than 0, and write into BWT file via using the same algorithm as writing delimiter.
 
 For large file encoding which is larger the 30MB, I first put indexes of previous 30,000,000 elements of the original file array and store in a temporary file after sorted. Then, repeat the last step and store the rest of elements in other temporary file. Next, I load the whole first temporary file and 2.5MB of second temporary file in each time.
